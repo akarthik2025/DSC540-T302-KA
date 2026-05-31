@@ -15,7 +15,10 @@ jupyter notebook Milestone5.ipynb
 ## Jupyter notebook with code and outputs/visualizations
 https://nbviewer.jupyter.org/github/akarthik2025/DSC540-T302-KA/blob/main/Milestone5.ipynb
 
----
+##Python File
+If Jupyter notebook is not loading in Github. Download Milestone5_final.py to your local. Create virtual environment, install the requirements listed in requirements.txt. Activate the virtual environment and run the python file.
+##Command
+python Milestone5_Final.py
 
 ## Project Overview
 
