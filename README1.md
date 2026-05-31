@@ -2,6 +2,9 @@
 
 A multi-source data engineering and analysis project that integrates **three heterogeneous datasets** — a CSV flat file, a web-scraped HTML table, and a live REST API — into a unified SQLite database, then visualizes the relationships between national happiness, economic output, and demographics.
 
+## Jupyter notebook with code and outputs/visualizations
+https://nbviewer.jupyter.org/github/akarthik2025/DSC540-T302-KA/blob/main/Milestone5.ipynb
+
 ---
 
 ## Project Overview
