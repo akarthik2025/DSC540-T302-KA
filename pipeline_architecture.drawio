@@ -1,0 +1,113 @@
+<mxfile host="app.diagrams.net" agent="copilot">
+  <diagram id="pipeline-1" name="Pipeline Architecture">
+    <mxGraphModel dx="1326" dy="1234" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" value="Global Quality of Life Analysis Pipeline" vertex="1">
+          <mxGeometry height="40" width="800" x="560" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="src1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" value="Kaggle CSV&#xa;(WHR Data)" vertex="1">
+          <mxGeometry height="90" width="220" x="130" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="src2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;" value="Wikipedia HTML&#xa;(GDP Table)" vertex="1">
+          <mxGeometry height="90" width="220" x="520" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="src3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" value="REST Countries API&#xa;(JSON)" vertex="1">
+          <mxGeometry height="90" width="220" x="910" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="proc1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#666666;fontSize=13;" value="kagglehub download" vertex="1">
+          <mxGeometry height="64" width="220" x="130" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="proc2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#666666;fontSize=13;" value="requests + BeautifulSoup" vertex="1">
+          <mxGeometry height="64" width="220" x="520" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="proc3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fa;strokeColor=#666666;fontSize=13;" value="requests.get() + JSON flatten" vertex="1">
+          <mxGeometry height="64" width="220" x="910" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="clean1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;" value="7 Cleaning Steps" vertex="1">
+          <mxGeometry height="68" width="220" x="130" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="clean2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;" value="8 Cleaning Steps" vertex="1">
+          <mxGeometry height="68" width="220" x="520" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="clean3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=13;" value="7 Cleaning Steps" vertex="1">
+          <mxGeometry height="68" width="220" x="910" y="405" as="geometry" />
+        </mxCell>
+        <mxCell id="fuzzy" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" value="Fuzzy Name Matching&#xa;(thefuzz library)" vertex="1">
+          <mxGeometry height="80" width="260" x="500" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=16;fontStyle=1;" value="SQLite Database" vertex="1">
+          <mxGeometry height="210" width="580" x="340" y="770" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=12;" value="happiness&#xa;(165 rows)" vertex="1">
+          <mxGeometry height="74" width="150" x="390" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=12;" value="gdp&#xa;(58 rows)" vertex="1">
+          <mxGeometry height="74" width="150" x="555" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="tbl3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontSize=12;" value="countries&#xa;(250 rows)" vertex="1">
+          <mxGeometry height="74" width="150" x="720" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="merged" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d4edda;strokeColor=#5a8f68;fontSize=12;" value="merged (165 x 30)" vertex="1">
+          <mxGeometry height="36" width="140" x="555" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="viz" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfe2f3;strokeColor=#6c8ebf;fontSize=13;" value="5 Visualizations&#xa;(Matplotlib, Seaborn, Plotly)" vertex="1">
+          <mxGeometry height="74" width="210" x="520" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="src1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="proc1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="src2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="proc2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="src3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="proc3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="proc1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="clean1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="proc2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="clean2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="proc3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="clean3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="clean1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="fuzzy">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="575" />
+              <mxPoint x="500" y="575" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="clean2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="fuzzy">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="clean3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="fuzzy">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="575" />
+              <mxPoint x="760" y="575" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="fuzzy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="join1" edge="1" parent="1" source="tbl1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.8;dashed=1;" target="merged" value="LEFT JOIN">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="join2" edge="1" parent="1" source="tbl2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.8;dashed=1;" target="merged" value="LEFT JOIN">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="join3" edge="1" parent="1" source="tbl3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1.8;dashed=1;" target="merged" value="LEFT JOIN">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="merged" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="viz">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
