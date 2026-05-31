@@ -2,6 +2,16 @@
 
 A multi-source data engineering and analysis project that integrates **three heterogeneous datasets** — a CSV flat file, a web-scraped HTML table, and a live REST API — into a unified SQLite database, then visualizes the relationships between national happiness, economic output, and demographics.
 
+## How to view the jupyter notebook:
+**Option 1: Use Jupyter Notebook Viewer (Easiest)**
+Go to https://nbviewer.jupyter.org/
+Paste your notebook URL: https://github.com/akarthik2025/DSC540-T302-KA/blob/main/Milestone5.ipynb
+It will render the notebook beautifully with all output and formatting
+**Option 2: Download and open locally**
+Click the download button  on GitHub
+Open it with Jupyter Notebook or JupyterLab on your computer:
+**Command**
+jupyter notebook Milestone5.ipynb
 ## Jupyter notebook with code and outputs/visualizations
 https://nbviewer.jupyter.org/github/akarthik2025/DSC540-T302-KA/blob/main/Milestone5.ipynb
 
